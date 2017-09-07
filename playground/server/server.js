@@ -61,6 +61,7 @@ passport.serializeUser(function(user, done){
 })
 
 passport.deserializeUser(function(user, done){
+    console.log("hello darkness my old friend");
     console.log(user);
     app.get('db').find_session_user(user.id).then(use =>{
         return done(null, user);
@@ -72,10 +73,12 @@ passport.deserializeUser(function(user, done){
 //////////////
 app.get('/auth', passport.authenticate('auth0'));
 app.get('/auth/callback', passport.authenticate('auth0', {
-    successRedirect: 'http://localhost:3000/private',
+    successRedirect: 'http://localhost:3000/#/private',
     failureRedirect: 'http://localhost:3000/failure'
 }));
 app.get('/auth/me', (req,res)=>{
+    console.log("I've come to speak with you again");
+    console.log(req.user);
     req.user ? res.status(200).send(req.user): res.status(404).send();
 })
 app.get('/auth/logout', (req, res)=>{
