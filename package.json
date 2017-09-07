@@ -1,0 +1,21 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theIfFactor/justPlayingAround.git"
+  },
+  "author": "Daniel Valentine <mrdanvalentine@gmail.com>",
+  "license": "MIT",
+  "description": "nothing really just playing around",
+  "bugs": {
+    "url": "https://github.com/theIfFactor/justPlayingAround/issues"
+  },
+  "homepage": "https://github.com/theIfFactor/justPlayingAround#readme",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
